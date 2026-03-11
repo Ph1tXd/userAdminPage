@@ -4,18 +4,24 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar"
 import { Camera } from 'lucide-react'
+import { useRef } from "react";
 
 export function AvatarBadgeIcon() {
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(event.target);
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  
+  const handleClick = () => {
+    fileRef.current?.click();
   };
+
   return (
     <Avatar className="group relative w-24 h-24 sm:w-32 sm:h-32" onClick={handleClick}>
+      
       <AvatarImage className="transition group-hover:opacity-70" src="data:image/jpeg;base64,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" alt="@pranathip" />
       <AvatarFallback>PP</AvatarFallback>
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 group-hover:opacity-100">
         <Camera className="text-white w-8 h-8" />
       </div>
+      <input ref={fileRef} type="file" id="avatar" accept="image/png, image/jpeg"/>
     </Avatar>
   )
 }
