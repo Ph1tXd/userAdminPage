@@ -18,7 +18,7 @@ export default function EditProfile({ onButtonClick, onTypeChange }: Props) {
                     <AvatarBadgeIcon/>
                 </div>
             </div>
-            <div className="w-full max-w-2xl space-y-6">
+            <div className="w-full space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                         <HeadIpnut header="First name" placeholder="Enter your first name..."/>
