@@ -6,6 +6,7 @@ import Session from "@/components/session"
 import { DialogCode } from "@/components/dialog-code"
 import { useState, useEffect } from "react"
 import SecurityPage from "@/components/security-page"
+import PreferencesPage from "@/components/preferences-page"
 
 export default function SettingsPage() {
     const [clicked, setClicked] = useState(false)
@@ -47,7 +48,9 @@ export default function SettingsPage() {
                 <TabsContent value="profile">
                     <EditProfile onButtonClick={() => setClicked(true)} onTypeChange={(value) => setChanged(value.trim() !== "" && isValidEmail(value))}/>
                 </TabsContent>
-                <TabsContent value="preferences"></TabsContent>
+                <TabsContent value="preferences">
+                    <PreferencesPage/>
+                </TabsContent>
                 <TabsContent value="session">
                     <Session />
                 </TabsContent>

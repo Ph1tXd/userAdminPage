@@ -11,7 +11,7 @@ export default function App() {
   return (
 
     <BrowserRouter>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ThemeProvider attribute="class" defaultTheme="dark" storageKey="vite-ui-theme">
         <ScrollArea className="h-screen w-screen">
           <Routes>
               <Route path="/" element={<Layout />}>
